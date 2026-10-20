@@ -1,4 +1,4 @@
-# Amigo Secreto
+# Sorteador
 
 Aplicação web simples para sortear um amigo secreto, feita como desafio do programa Oracle Next Education (ONE) com a Alura.
 
