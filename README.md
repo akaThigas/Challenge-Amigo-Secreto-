@@ -4,7 +4,7 @@ Aplicação web simples para sortear um nome entre os amigos adicionados, feita 
 
 ## Site
 
-O projeto fica publicado em **https://akathigas.github.io/Challenge-Amigo-Secreto-/** pelo GitHub Pages.
+O projeto fica publicado em **https://akathigas.github.io/Sorteador/** pelo GitHub Pages.
 
 Na primeira vez, é preciso ligar o site no GitHub: **Settings → Pages → Build and deployment → Deploy from a branch → `main` / `(root)` → Save**. Depois disso, cada mudança enviada para a `main` atualiza o site sozinha em um ou dois minutos.
 
