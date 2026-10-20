@@ -1,67 +1,67 @@
-// Lista com os nomes dos amigos adicionados
-let listaDeAmigos = [];
+// Lista com os nomes adicionados ao sorteio
+let listaDeNomes = [];
 
-const campoAmigo = document.getElementById('amigo');
-campoAmigo.value = ''; // iniciar campo sem valor
+const campoNome = document.getElementById('nome');
+campoNome.value = ''; // iniciar campo sem valor
 
 // Permite adicionar o nome pressionando Enter
-campoAmigo.addEventListener('keydown', (evento) => {
+campoNome.addEventListener('keydown', (evento) => {
     if (evento.key === 'Enter') {
-        adicionarAmigo();
+        adicionarNome();
     }
 });
 
-function adicionarAmigo() {
-    const nomeAmigo = campoAmigo.value.trim();
+function adicionarNome() {
+    const nomeDigitado = campoNome.value.trim();
 
-    if (nomeAmigo === '') {
+    if (nomeDigitado === '') {
         mensagemErro('Por favor, insira um nome válido.');
         return;
     }
 
-    const nomeJaExiste = listaDeAmigos.some(
-        (amigo) => amigo.toLowerCase() === nomeAmigo.toLowerCase()
+    const nomeJaExiste = listaDeNomes.some(
+        (nome) => nome.toLowerCase() === nomeDigitado.toLowerCase()
     );
     if (nomeJaExiste) {
-        mensagemErro(`O nome "${nomeAmigo}" já foi adicionado.`);
+        mensagemErro(`O nome "${nomeDigitado}" já foi adicionado.`);
         return;
     }
 
-    listaDeAmigos.push(nomeAmigo);
+    listaDeNomes.push(nomeDigitado);
     limparMensagem();
     limparResultado();
     atualizarLista();
 
-    campoAmigo.value = '';
-    campoAmigo.focus();
+    campoNome.value = '';
+    campoNome.focus();
 }
 
-function sortearAmigo() {
-    if (listaDeAmigos.length === 0) {
-        mensagemErro('Adicione pelo menos um amigo antes de sortear.');
+function sortearNome() {
+    if (listaDeNomes.length === 0) {
+        mensagemErro('Adicione pelo menos um nome antes de sortear.');
         return;
     }
 
     limparMensagem();
-    const indiceEscolhido = Math.floor(Math.random() * listaDeAmigos.length);
-    exibeAmigo(listaDeAmigos[indiceEscolhido]);
+    const indiceEscolhido = Math.floor(Math.random() * listaDeNomes.length);
+    exibeNome(listaDeNomes[indiceEscolhido]);
 }
 
 //==================ESPACO AUXILIAR==============
 
 function atualizarLista() {
-    const listElement = document.getElementById('listaAmigos');
+    const listElement = document.getElementById('listaNomes');
     listElement.innerHTML = '';
 
-    listaDeAmigos.forEach((nome) => {
+    listaDeNomes.forEach((nome) => {
         const listItem = document.createElement('li');
         listItem.textContent = nome;
         listElement.appendChild(listItem);
     });
 
-    const total = listaDeAmigos.length;
+    const total = listaDeNomes.length;
     document.getElementById('contador').textContent =
-        total === 1 ? '1 amigo adicionado' : `${total} amigos adicionados`;
+        total === 1 ? '1 nome adicionado' : `${total} nomes adicionados`;
 }
 
 function limparResultado() {
@@ -73,18 +73,18 @@ function mensagemErro(mensagem) {
     const elemento = document.getElementById('mensagem');
     elemento.textContent = mensagem;
     elemento.hidden = false;
-    campoAmigo.focus();
+    campoNome.focus();
 }
 
 function limparMensagem() {
     document.getElementById('mensagem').hidden = true;
 }
 
-function exibeAmigo(amigo) {
+function exibeNome(nome) {
     const resultado = document.getElementById('resultado');
     resultado.innerHTML = '';
 
     const listItem = document.createElement('li');
-    listItem.textContent = `O nome sorteado é: ${amigo}`;
+    listItem.textContent = `O nome sorteado é: ${nome}`;
     resultado.appendChild(listItem);
 }

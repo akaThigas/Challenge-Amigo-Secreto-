@@ -1,6 +1,6 @@
 # Sorteador
 
-Aplicação web simples para sortear um nome entre os amigos adicionados, feita como desafio do programa Oracle Next Education (ONE) com a Alura.
+Aplicação web simples para sortear um nome de uma lista, feita como desafio do programa Oracle Next Education (ONE) com a Alura.
 
 ## Site
 
@@ -11,9 +11,9 @@ Na primeira vez, é preciso ligar o site no GitHub: **Settings → Pages → Bui
 ## Como usar
 
 1. Acesse o site ou abra o arquivo `index.html` no navegador.
-2. Digite o nome de um amigo e clique em **Adicionar** (ou pressione Enter).
-3. Repita para todos os participantes. Nomes vazios ou repetidos não são aceitos.
-4. Clique em **Sortear amigo** para ver o nome sorteado. A lista continua salva, então dá para sortear de novo.
+2. Digite um nome e clique em **Adicionar** (ou pressione Enter).
+3. Repita para todos os nomes do sorteio. Nomes vazios ou repetidos não são aceitos.
+4. Clique em **Sortear** para ver o nome sorteado. A lista continua salva, então dá para sortear de novo.
 
 ## Tecnologias
 

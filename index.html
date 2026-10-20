@@ -14,25 +14,25 @@
     <main class="main-content">
         <header class="header-banner">
             <h1 class="main-title">Sorteador</h1>
-            <img src="assets/amigo-secreto.svg" alt="Imagem de um presente">
+            <img src="assets/sorteador.svg" alt="Dois dados">
         </header>
         
         <section class="input-section">
-            <h2 id="tituloLista" class="section-title">Digite o nome dos seus amigos</h2>
+            <h2 id="tituloLista" class="section-title">Digite os nomes do sorteio</h2>
             <div class="input-wrapper">
-                <input type="text" id="amigo" class="input-name" placeholder="Digite um nome">
-                <button class="button-add" onclick="adicionarAmigo()">Adicionar</button>
+                <input type="text" id="nome" class="input-name" placeholder="Digite um nome">
+                <button class="button-add" onclick="adicionarNome()">Adicionar</button>
             </div>
             <p id="mensagem" class="error-message" role="alert" hidden></p>
 
-            <p id="contador" class="name-count">Nenhum amigo adicionado ainda.</p>
-            <ul id="listaAmigos" class="name-list" aria-labelledby="tituloLista" role="list"></ul>
+            <p id="contador" class="name-count">Nenhum nome adicionado ainda.</p>
+            <ul id="listaNomes" class="name-list" aria-labelledby="tituloLista" role="list"></ul>
             <ul id="resultado" class="result-list" aria-live="polite"></ul>
 
             <div class="button-container">
-                <button class="button-draw" onclick="sortearAmigo()" aria-label="Sortear um nome">
+                <button class="button-draw" onclick="sortearNome()" aria-label="Sortear um nome">
                     <img src="assets/play_circle_outline.svg" alt="" aria-hidden="true">
-                    Sortear amigo
+                    Sortear
                 </button>
             </div>
         </section>
