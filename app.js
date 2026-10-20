@@ -56,6 +56,10 @@ function atualizarLista() {
         listItem.textContent = nome;
         listElement.appendChild(listItem);
     });
+
+    const total = listaDeAmigos.length;
+    document.getElementById('contador').textContent =
+        total === 1 ? '1 amigo adicionado' : `${total} amigos adicionados`;
 }
 
 function limparResultado() {
