@@ -9,6 +9,8 @@
     --color-white: #FFFFFF;
     --color-success: #0a8a3a;
     --color-success-bg: #e6f7ec;
+    /* O site tem um visual só; evita que o modo escuro do aparelho mude as cores dos campos */
+    color-scheme: light;
 }
 
 /* Estilos gerais */
@@ -103,7 +105,12 @@ body {
     border: none;
     font-size: 16px;
     font-family: "Inter", sans-serif;
+    color: var(--color-text);
     background: transparent;
+}
+
+.input-name::placeholder {
+    color: #888;
 }
 
 .input-name:focus {
@@ -149,6 +156,24 @@ button:focus-visible {
 
 .button-add:hover {
     background-color: #a1a1a1;
+}
+
+.error-message {
+    width: 100%;
+    max-width: 600px;
+    margin-top: 12px;
+    padding: 10px 16px;
+    background-color: #fdecea;
+    border: 2px solid #c62828;
+    border-radius: 12px;
+    color: #b71c1c;
+    font-size: 15px;
+    font-weight: 700;
+    text-align: center;
+}
+
+.error-message[hidden] {
+    display: none;
 }
 
 /* Listas */
