@@ -28,6 +28,7 @@ function adicionarAmigo() {
     }
 
     listaDeAmigos.push(nomeAmigo);
+    limparMensagem();
     limparResultado();
     atualizarLista();
 
@@ -41,6 +42,7 @@ function sortearAmigo() {
         return;
     }
 
+    limparMensagem();
     const indiceEscolhido = Math.floor(Math.random() * listaDeAmigos.length);
     exibeAmigo(listaDeAmigos[indiceEscolhido]);
 }
@@ -68,7 +70,14 @@ function limparResultado() {
 
 function mensagemErro(mensagem) {
     limparResultado();
-    alert(mensagem);
+    const elemento = document.getElementById('mensagem');
+    elemento.textContent = mensagem;
+    elemento.hidden = false;
+    campoAmigo.focus();
+}
+
+function limparMensagem() {
+    document.getElementById('mensagem').hidden = true;
 }
 
 function exibeAmigo(amigo) {

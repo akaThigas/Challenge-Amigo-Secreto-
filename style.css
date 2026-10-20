@@ -151,6 +151,24 @@ button:focus-visible {
     background-color: #a1a1a1;
 }
 
+.error-message {
+    width: 100%;
+    max-width: 600px;
+    margin-top: 12px;
+    padding: 10px 16px;
+    background-color: #fdecea;
+    border: 2px solid #c62828;
+    border-radius: 12px;
+    color: #b71c1c;
+    font-size: 15px;
+    font-weight: 700;
+    text-align: center;
+}
+
+.error-message[hidden] {
+    display: none;
+}
+
 /* Listas */
 .name-count {
     margin-top: 24px;
