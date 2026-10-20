@@ -9,6 +9,8 @@
     --color-white: #FFFFFF;
     --color-success: #0a8a3a;
     --color-success-bg: #e6f7ec;
+    /* O site tem um visual só; evita que o modo escuro do aparelho mude as cores dos campos */
+    color-scheme: light;
 }
 
 /* Estilos gerais */
@@ -103,7 +105,12 @@ body {
     border: none;
     font-size: 16px;
     font-family: "Inter", sans-serif;
+    color: var(--color-text);
     background: transparent;
+}
+
+.input-name::placeholder {
+    color: #888;
 }
 
 .input-name:focus {
