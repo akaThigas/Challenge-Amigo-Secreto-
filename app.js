@@ -85,6 +85,6 @@ function exibeAmigo(amigo) {
     resultado.innerHTML = '';
 
     const listItem = document.createElement('li');
-    listItem.textContent = `O amigo secreto sorteado é: ${amigo}`;
+    listItem.textContent = `O nome sorteado é: ${amigo}`;
     resultado.appendChild(listItem);
 }
